@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Jogo da Velha</h1>
+      <p class="hint">Clique em uma casa para jogar.</p>
+
+      <div class="controls">
+        <label for="mode">Modo de jogo:</label>
+        <select id="mode" aria-label="Modo de jogo">
+          <option value="ai" selected>Você (X) vs Computador (O)</option>
+          <option value="pvp">2 jogadores (X e O)</option>
+        </select>
+      </div>
+
+      <p id="status" class="status" aria-live="polite">Sua vez (X)</p>
+
+      <section class="board" aria-label="Tabuleiro de jogo da velha">
+        <button type="button" class="cell" data-index="0" aria-label="Casa 1"></button>
+        <button type="button" class="cell" data-index="1" aria-label="Casa 2"></button>
+        <button type="button" class="cell" data-index="2" aria-label="Casa 3"></button>
+        <button type="button" class="cell" data-index="3" aria-label="Casa 4"></button>
+        <button type="button" class="cell" data-index="4" aria-label="Casa 5"></button>
+        <button type="button" class="cell" data-index="5" aria-label="Casa 6"></button>
+        <button type="button" class="cell" data-index="6" aria-label="Casa 7"></button>
+        <button type="button" class="cell" data-index="7" aria-label="Casa 8"></button>
+        <button type="button" class="cell" data-index="8" aria-label="Casa 9"></button>
+      </section>
+
+      <div class="score" aria-label="Placar">
+        <span id="score-x">X: 0</span>
+        <span id="score-o">O: 0</span>
+        <span id="score-draw">Empates: 0</span>
+      </div>
+
+      <div class="actions">
+        <button type="button" id="reset-round" class="btn">Nova rodada</button>
+        <button type="button" id="reset-score" class="btn btn-secondary">Zerar placar</button>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
